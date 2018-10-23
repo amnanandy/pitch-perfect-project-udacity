@@ -36,6 +36,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     // MARK: Actions
     
+    // recordAudio function provided as a code snippet from Udacity training.
     @IBAction func recordAudio(_ sender: Any) {
         configureUI(true)
         
@@ -65,11 +66,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     // MARK: Setup for storyboard ViewController switch
     
+    // The following two functions were provided as code snippets from Udacity training.
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
-            print("Recording not successful, pleae try again.")
+            print("Recording not successful, please try again.")
         }
     }
     
@@ -101,6 +103,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     /*
      * Set the content mode for the image views to prevent image
      * stretching when device is rotated to landscape.
+     * This is done progrmatically rather than through the setting in storyboard.
      */
     func setImageContentModes() {
         recordButton.imageView?.contentMode = .scaleAspectFit

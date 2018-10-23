@@ -48,6 +48,7 @@ class PlaySoundsViewController: UIViewController {
     
     // MARK: Actions
     
+    // playSoundsForButton method was modified from a code snippet provided by Udacity training.
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
             case .slow:
@@ -76,6 +77,7 @@ class PlaySoundsViewController: UIViewController {
     /*
      * Set the content mode for the image views to prevent image
      * stretching when device is rotated to landscape.
+     * This is done progrmatically rather than through the setting in storyboard.
      */
     func setImageContentModes() {
         slowButton.imageView?.contentMode = .scaleAspectFit
