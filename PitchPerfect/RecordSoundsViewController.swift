@@ -104,6 +104,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
      * Set the content mode for the image views to prevent image
      * stretching when device is rotated to landscape.
      * This is done progrmatically rather than through the setting in storyboard.
+     * Code adapted from stackoverflow forum: https://stackoverflow.com/questions/38697032/how-to-center-an-image-inside-an-uibutton-without-stretching-in-both-direction-i
      */
     func setImageContentModes() {
         recordButton.imageView?.contentMode = .scaleAspectFit
